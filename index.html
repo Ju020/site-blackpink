@@ -1,3 +1,14 @@
+Para deixar o código mais equilibrado e com tamanhos mais apropriados, você pode ajustar a responsividade e os tamanhos das imagens e fontes, tornando a navegação e a leitura mais confortáveis.
+
+Aqui estão algumas alterações que podemos aplicar para corrigir os "bagulhos muito grandes":
+
+1. **Tamanho das imagens:** Ajuste de largura para as imagens para que não ocupem todo o espaço da tela em dispositivos menores.
+2. **Tamanho das fontes:** Ajuste de fontes em algumas áreas para torná-las mais adequadas.
+3. **Ajuste das margens e paddings:** Melhorar a disposição do layout para dispositivos móveis.
+
+Aqui está o código atualizado com essas mudanças:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,11 +23,10 @@
 </head>
 
 <body>
-    <header class=" p-5">
-
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Blackpink_-_EP.jpg" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
+    <header class="p-4">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Blackpink_-_EP.jpg" class="nav-img img-fluid" style="max-width: 200px;" loading="lazy">
+            <ul class="nav mt-2">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
@@ -30,58 +40,51 @@
                 </div>
             </div>
         </nav>
-       
     </header>
-
 
     <main class="container my-5">
 
         <section id="inicio" class="my-5">
             <div class="inicio-fundo d-flex justify-content-between align-items-center">
                 <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/logo-2.png" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
+                    <h1 class="display-5 text-white fst-italic fw-bold">Boas-vindas ao</h1>
+                    <img src="img/logo-2.png" class="mb-3" width="100%" height="auto" loading="lazy">
+                    <a href="#blackpink" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
                 </div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/180624_%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC_%EB%B6%84%EB%8B%B9_AK%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%8C%AC%EC%82%AC%EC%9D%B8%ED%9A%8C_1.jpg" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em um microfone" title="blackpink - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
-
-              </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/180624_%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC_%EB%B6%84%EB%8B%B9_AK%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%8C%AC%EC%82%AC%EC%9D%B8%ED%9A%8C_1.jpg" alt="Blackpink" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
         </section>
 
-        <section id="blackpink" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre a blackpink">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy">
+        <section id="blackpink" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre Blackpink">
+            <div class="container d-flex align-items-center">
+                <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+                    <img src="img/image (1).png" class="rounded-pill" width="80%" height="auto" loading="lazy">
                 </div>
-                <div class="col-5">
-                    <h2>Qual é a história do Blackpink?</h2>
-                    <p class="p-2">O BLACKPINK é um grupo feminino sul-coreano formado pela YG Entertainment em 2016, composto por quatro integrantes: Jisoo, Jennie, Rosé e Lisa. O grupo se destacou rapidamente na cena do K-pop, com hits como "Boombayah", "Whistle", "Playing with Fire" e "Ddu-Du Ddu-Du". BLACKPINK também é conhecido por suas colaborações com artistas internacionais e por quebrar recordes em diversas plataformas, incluindo o YouTube e o Spotify. </p>
+                <div class="col-12 col-md-5">
+                    <h2 class="h3">Qual é a história do Blackpink?</h2>
+                    <p class="p-2">O BLACKPINK é um grupo feminino sul-coreano formado pela YG Entertainment em 2016, composto por quatro integrantes: Jisoo, Jennie, Rosé e Lisa. O grupo se destacou rapidamente na cena do K-pop, com hits como "Boombayah", "Whistle", "Playing with Fire" e "Ddu-Du Ddu-Du". BLACKPINK também é conhecido por suas colaborações com artistas internacionais e por quebrar recordes em diversas plataformas, incluindo o YouTube e o Spotify.</p>
                 </div>
             </div>
         </section>
 
         <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
             <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
+            <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-lg-4 mb-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/180125_%EC%84%9C%EC%9A%B8%EA%B0%80%EC%9A%94%EB%8C%80%EC%83%81_-_%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC.png"
                             class="img-fluid rounded-5" loading="lazy">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-lg-4 mb-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%28BlackPink%29_-_%EB%A7%88%EC%A7%80%EB%A7%89%EC%B2%98%EB%9F%BC_171001_%EC%BD%94%EB%A6%AC%EC%95%84%EB%AE%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C.jpg" class="img-fluid rounded-5"
                             loading="lazy">
                     </div>
                 </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
+                <div class="row mt-4 justify-content-md-center">
+                    <div class="col-md-6 col-lg-4 mb-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/20240809_Blackpink_Pink_Carpet_09.png" class="img-fluid rounded-5" loading="lazy">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-lg-4 mb-4">
                         <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Blackpink_-_Re-Blackpink.jpg"
                             class="img-fluid rounded-5" loading="lazy">
                     </div>
@@ -91,7 +94,7 @@
 
         <section id="contato">
             <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
                     <h2 class="mb-3">Entre em contato</h2>
                     <form>
                         <div class="form-group mb-3">
@@ -110,25 +113,13 @@
                                 placeholder="Escreva sua mensagem"></textarea>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
-  
-</body>
 
-
-</html>
+    <footer class="
+```
